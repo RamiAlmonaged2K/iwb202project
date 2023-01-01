@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html dir="rtl">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>StudentRegistration</title>
+        <!-- css file -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>إضافة طالب</h1>
+        <!-- form to enter students data -->
+        <div class="form">
+             <img id="pic" , src="Logo.jpg" ,  width="22%" , height="33%" , alt="">
+            <table>
+                <tr>
+                    <td>اسم المستخدم </td>
+                    <td><input type="text" id="uname" placeholder="Ali_134687" required></td>
+                </tr>
+                <tr>
+                    <td>اسم الطالب </td>
+                    <td><input type="text" id="sname" placeholder="مثال:علي سلمان" required><br></td>
+                </tr>
+                <tr>
+                    <td>تاريخ الولادة </td>
+                    <td><input type="date" id="date" required></td>
+                </tr>
+                <tr>
+                    <td>البرنامج </td>
+                    <td>
+                        <select id="program1" required>
+                        <option value="bait">BAIT</option>
+                        <option value="bit">BIT</option>
+                        <option value="tic">TIC</option>
+                    </select>
+                </td>
+                </tr>
+                <tr>
+                    <td>الموبايل</td>
+                    <td><input type="tel" id="mob" placeholder="+963-965874123" required></td>
+                </tr>
+                <tr>
+                    <td>رمز التحقق <img id="refresh" src="RefreshBottom.png" onclick="addcap();"></td>
+                    <td><input type="text" id="capt" readonly="readonly" placeholder="click on arrow button"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>يرجى إدخال رمز التحقق (الكابتشا))</td>
+                    <td>    <input type="text" id="textinput" placeholder="enter the captcha" required>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="إضافة" id="bu" onclick="AddStud();">
+        </div>
+        <hr>
+        <h1>جدول بأسماء الطلاب</h1>
+        <div class="filter">
+            <!-- filter the data according to program -->
+            <div class="filterr">
+                <label for="program">البرنامج</label>
+                <select id="program12" onchange="getsel();">
+                    <option id="ALL" value="ALL">ALL</option>
+                    <option id="BAIT" value="BAIT" >BAIT</option>
+                    <option id="BIT" value="BIT" >BIT</option>
+                    <option id="TIC" value="TIC">TIC</option>
+                </select>
+            </div>
+            <form class="sortt">
+                <!-- sort the data accorrding to id or name or program  -->
+                <label>الفرز حسب:</label></br> 
+                <input id="Nuser" type="radio" value="Nuser" name="sort" onclick="sortty(Nuser);" checked>رقم المستخدم 
+                <input id="Nstudent" type="radio" value="Nstudent" name="sort" onclick="sortty(Nstudent);"> اسم الطالب 
+                <!-- <label for="Nstudent"></label> -->
+                <input id="Prog" type="radio" value="Prog" name="sort" onclick="sortty(Prog);"> البرنامج 
+                <!-- <label for="program"></label> -->
+            </form>
+            <!-- table to put the data of students -->
+        <table id="ta">
+            <thead>
+                <th>تسلسل</th>
+                <th>اسم المستخدم</th>
+                <th>اسم الطالب</th>
+                <th>البرنامج</th>
+            </thead>
+            <tbody id="res">
+            </tbody>
+        </table>
+        </div>
+        <!-- the textarea to put the data when convert it to JSON -->
+        <div class="convert" dir="ltr">
+            <button id="conv" onclick="conv();">convert to JSON</button><br>
+            <textarea id="textA" name="s" rows="30" placeholder="write here"></textarea><br>
+        </div>
+    </body>
+    <!-- java script file and jquery library -->
+    <script  type="text/javaScript" src="main.js"></script>
+</html>

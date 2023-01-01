@@ -1,0 +1,92 @@
+body{
+    background-color: #ddf;
+}
+h1 {
+    text-align: center;
+}
+.form{
+    padding: 25px 350px 30px 10px;
+    background-color: #ccc;
+    margin: 50px 320px;
+    border-radius: 10px;
+}
+.form {
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+}
+.filter{
+    padding: 15px 50px;
+    margin: 0 320px;
+}
+#bu{
+    background-color: #FF7F50;
+    color: #4b0082;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 130px;
+    margin: 3px;
+    size: 20px;
+    border-color: Black ;
+    cursor: pointer;
+}
+.box{
+    padding: 10px 0;
+    margin: 10px ;
+}
+#textinput{
+    margin: 10px 2px ; 
+}
+#pic{
+    position:absolute;
+    right:22%;
+    top: 17%;
+    border-radius: 6%;
+}
+#ta{
+    width: 100%;
+    text-align: center;
+    margin: 10px 100px;
+    border: 2px solid black;
+    background-color: white;
+
+}
+#ta td{
+    border: 1px solid black;
+}
+#ta thead th{
+    background-color:#00FFFF;
+    font-weight: bold;
+    border: 1px solid black;
+}
+button{
+    background-color: #FF7F50;
+    color: #4b0082;
+    border-radius: 5px;
+    text-align: center;
+    margin: 3px;
+    size: 25px;
+    border-color: Black ;
+    cursor: pointer;
+}
+.filterr{
+    margin-bottom:10px  ;
+}
+.sortt{
+    margin-bottom:10px  ;
+}
+.convert{
+    margin: 10px 0 0 270px;
+}
+#refresh{
+    border-radius: 10px;
+    cursor: pointer;
+    width: 20px;
+    position: relative;
+    top: 8px;
+}
+
+#mob{
+	direction: ltr;
+}
